@@ -14,7 +14,7 @@ spec:
     git:
       url: https://github.com/pacphi/AltPackageRepository
       ref:
-        branch: main
+        branch: with-tests
   build:
     env:
       - name: BP_DOTNET_PROJECT_PATH
