@@ -5,6 +5,7 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: AltPackageRepository
+    apps.tanzu.vmware.com/has-tests: true
 spec:
   params:
     - name: run-image
@@ -14,3 +15,7 @@ spec:
       url: https://github.com/pacphi/AltPackageRepository
       ref:
         branch: main
+  build:
+    env:
+      - name: BP_DOTNET_PROJECT_PATH
+        value: src
